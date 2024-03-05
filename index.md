@@ -16,7 +16,7 @@ For other activities, visit [my GitHub page](https://github.com/paspiz85).
 
 ### A Brief History
 
-I was born on 8th February 1985 and studied computer science at the [Università degli Studi di Salerno](https://www.unisa.it/), where I graduated in 2007.
+I was born on 8th February 1985 and studied **computer science** at the [Università degli Studi di Salerno](https://www.unisa.it/), where I graduated in 2007.
 
 After obtaining bachelor's degree, I continued my studies. In 2008 I began working in a small company based in Rome, Italy. However, after several years (and numerous exams), I decided to suspend my master's degree to fully dedicate myselft to work.
 
