@@ -34,7 +34,6 @@ My main education and training achievements include:
 - **Sun Certified Developer for Java Web Services** by Sun Microsystem Italia S.p.A in 2010
 - **Oracle PL/SQL Developer Certified Associate** by Oracle Italia S.r.l in 2010
 
-You can view my full Curriculum Vitae at following:
+You can view my full Curriculum Vitae on my [LinkedIn profile](https://it.linkedin.com/in/pasqualepizzuti) or at following:
 - [Curriculum Vitae (EN)](https://www.dropbox.com/scl/fi/o6tm96omnijtgldcla9pm/CV-Europass-Pizzuti-EN.pdf?rlkey=drypp4ehmbzrwr9v616husawy&dl=0)
 - [Curriculum Vitae (IT)](https://www.dropbox.com/scl/fi/lje7h6xpnv7px0ge7euk4/CV-Europass-Pizzuti-IT.pdf?rlkey=9lulf4zvf7ugvfsvja018kxzx&dl=0)
-or on my [LinkedIn profile](https://it.linkedin.com/in/pasqualepizzuti)
