@@ -12,6 +12,8 @@ In the realm of home automation, I am proficient in building small **LAN network
 
 I am passionate about photography and am actively working to improve my skills in photo editing.
 
+For other activities, visit my [GitHub](https://github.com/paspiz85).
+
 ### A Brief History
 
 I was born on 8th February 1985 and studied computer science at the [Università degli Studi di Salerno](https://www.unisa.it/), where I graduated in 2007.
