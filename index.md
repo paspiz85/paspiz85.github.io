@@ -2,13 +2,12 @@
 
 I'm Pasquale Pizzuti, and this is my profile page where I share information about my job, my skills, my projects, my ideas and much more!
 
-I work as Software Developer Engineer in a small company based in Battipaglia, Italy.
-
 ### Projects and skills
 
-I have been working with the **Java language** since my first projects at university (since 2005), accumulating substantial expertise over the years. My projects primarily involve web-based applications, and I also possess skills in related languages such as SQL, XML, SOAP, JSON, Javascript, HTTP, HTML, CSS, etc.
+I work as Software Developer Engineer in a small company based in Battipaglia, Italy. I have been working with the **Java language** since my first projects at university (since 2005), accumulating substantial expertise over the years. My projects primarily involve **web-based applications**, and I also possess skills in related languages such as SQL, XML, SOAP, JSON, Javascript, HTTP, HTML, CSS, etc.
 
-I prefer working on **Linux** systems but also maintain solid experience with Windows environments.
+I prefer working on **Linux** systems but also maintain solid experience with Windows environments. Recently 
+Recently, I've been specializing in using the **Raspberry Pi** system (headless) to support home automation, particularly with applications like [OpenHAB](https://www.openhab.org/), [Pi-Hole](https://pi-hole.net/), [RetroPie](https://retropie.org.uk/), [Kodi](https://kodi.tv/), etc.
 
 ### A Brief History
 
