@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pasquale Pizzuti
+title: Pasquale
 ---
 ## Welcome
 
