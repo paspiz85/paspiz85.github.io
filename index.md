@@ -12,7 +12,7 @@ In the realm of home automation, I am proficient in building small **LAN network
 
 I am passionate about photography and am actively working to improve my skills in photo editing.
 
-For other activities, visit my [GitHub](https://github.com/paspiz85).
+For other activities, visit [my GitHub page](https://github.com/paspiz85).
 
 ### A Brief History
 
