@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Pasquale
+title: Pasquale Pizzuti
 ---
+
 ## Welcome
 
 I'm Pasquale Pizzuti, and this is my profile page where I share information about my job, my skills, my projects, my ideas and much more!
