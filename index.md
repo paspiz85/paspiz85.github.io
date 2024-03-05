@@ -4,10 +4,13 @@ I'm Pasquale Pizzuti, and this is my profile page where I share information abou
 
 ### Projects and skills
 
-I work as Software Developer Engineer in a small company based in Battipaglia, Italy. I have been working with the **Java language** since my first projects at university (since 2005), accumulating substantial expertise over the years. My projects primarily involve **web-based applications**, and I also possess skills in related languages such as SQL, XML, SOAP, JSON, Javascript, HTTP, HTML, CSS, etc.
+I work as a Software Developer Engineer in a small company based in Battipaglia, Italy. Since my first projects at university (about since 2005), I have been working with the **Java language** accumulating substantial expertise over the years. My projects primarily involve **web-based applications**, and I also possess skills in related languages such as SQL, XML, SOAP, JSON, Javascript, HTTP, HTML, CSS, etc.
 
-I prefer working on **Linux** systems but also maintain solid experience with Windows environments. Recently 
-Recently, I've been specializing in using the **Raspberry Pi** system (headless) to support home automation, particularly with applications like [OpenHAB](https://www.openhab.org/), [Pi-Hole](https://pi-hole.net/), [RetroPie](https://retropie.org.uk/), [Kodi](https://kodi.tv/), etc.
+My preferred Operating System is **Linux** that is more flexible for programmers but also maintain solid experience with Windows environments. Recently, I've been specializing in using the **Raspberry Pi** system (headless) to support home automation, particularly with applications like [OpenHAB](https://www.openhab.org/), [Pi-Hole](https://pi-hole.net/), [RetroPie](https://retropie.org.uk/), [Kodi](https://kodi.tv/), etc.
+
+In the realm of home automation, I am proficient in building small **LAN networks** and have acquired skills in creating simple circuits based on the [ESP32](https://www.espressif.com/en/products/socs/esp32) microcontroller unit, programmed through the Arduino platform.
+
+I am passionate about photography and am actively working to improve my skills in photo editing.
 
 ### A Brief History
 
