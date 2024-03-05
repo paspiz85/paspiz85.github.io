@@ -6,9 +6,9 @@ I work as Software Developer Engineer in a small company based in Battipaglia, I
 
 ### Projects and skills
 
-I have been working with the Java language since my first projects at university (since 2005), and over the years, I've gained substantial expertise in this field. My proficiency in Java extends across various projects and experiences, reflecting a significant level of mastery. These skills extend to connected languages such as SQL, XML, SOAP, JSON, Javascript, HTTP, HTML, CSS, etc.
+I have been working with the **Java language** since my first projects at university (since 2005), accumulating substantial expertise over the years. My projects primarily involve web-based applications, and I also possess skills in related languages such as SQL, XML, SOAP, JSON, Javascript, HTTP, HTML, CSS, etc.
 
-I have a strong affinity for working with Linux systems, leveraging my skills to optimize performance and functionality. Additionally, I possess considerable experience in working with Windows environments.
+I prefer working on **Linux** systems but also maintain solid experience with Windows environments.
 
 ### A Brief History
 
