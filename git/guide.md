@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png" alt="logo git">
 </p>
-Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato per gestire progetti software. Questa guida ti fornirà le informazioni di base per utilizzare al meglio Git nel tuo progetto. Nota: questa è solo una breve introduzione, per ulteriori dettagli consulta la documentazione ufficiale di [Git](https://git-scm.com/doc).
+Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato per gestire progetti software. Questa guida ti fornirà le informazioni di base per utilizzare al meglio Git nel tuo progetto. Nota: questa è solo una breve introduzione, per ulteriori dettagli consulta la [documentazione ufficiale di Git](https://git-scm.com/doc).
 
 ## Indice
 1. [Installazione e configurazione iniziale](#installazione-e-configurazione-iniziale)
