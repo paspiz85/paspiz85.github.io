@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png" alt="logo git">
 </p>
-Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato per gestire progetti software. Questa guida ti fornirà le informazioni di base per utilizzare al meglio Git nel tuo progetto.
+Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato per gestire progetti software. Questa guida ti fornirà le informazioni di base per utilizzare al meglio Git nel tuo progetto. Nota: questa è solo una breve introduzione, per ulteriori dettagli consulta la documentazione ufficiale di [Git](https://git-scm.com/doc).
 
 ## Indice
 1. [Installazione e configurazione iniziale](#installazione-e-configurazione-iniziale)
@@ -10,9 +10,8 @@ Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato 
 3. [Repository locali e remoti](#repository-locali-e-remoti)
 4. [Gestione delle modifiche](#gestione-delle-modifiche)
 5. [Branching](#branching)
-6. [Fusione di branch](#fusione-di-branch)
-7. [Rimozione di file](#rimozione-di-file)
-8. [GitHub e repository remoti](#github-e-repository-remoti)
+6. [Merge e rebase](#merge-e-rebase)
+7. [Tagging](#tagging)
 
 ## Installazione e configurazione iniziale
 
@@ -130,7 +129,7 @@ Quando il nostro lavoro ci sembra consistente possiamo procedere a confermare tu
 ```bash
 git commit -m "Descrizione del commit"
 ```
-Il messaggio è _OBBLIGATORIO_, se non specificato va inserito tramite l'editor di testo configurato in Git. 
+Il messaggio è _OBBLIGATORIO_, se non specificato va inserito tramite l'editor di testo configurato in Git. Al termine il commit sarà identificato univocamente con un UUID ed inserito nella cronologia insieme alle informazioni dell'autore (nome ed e-mail).
 
 Nel caso fosse sfuggito qualcosa è possibile fare un secondo commit con l'opzione --amend:
 ```bash
@@ -138,6 +137,17 @@ git commit --amend
 ```
 Il primo commit verrà sostituito da un commit cumulativo.
 
+*ATTENZIONE*: l'operazione di push è fondamentale per pubblicare un commit ed il comando commit non fornisce un meccanismo per automatizzare tale operazione. Tuttavia Git permette la definizione di alias per automatizzare questi due comandi:
+```bash
+git config --global alias.commit-push '!f() { git commit -m "$1" && git push; }; f'
+```
+Ora sarà possibile eseguire:
+```bash
+git commit-push "Descrizione del commit"
+```
+
+### Esclusione dal versioning
+Nel caso in cui sia necessario escludere file/cartelle dal versionamento si usa l'apposito file di testo **.gitignore**.
 
 ### Stash
 In realtà esisterebbe anche un ulteriore stato chiamato *stashed* in cui modifiche staged ed unstaged posso essere messe in una sorta di stack che (LIFO) utile per accantonare modifiche da utilizzare in un secondo momento. Per mettere da parte tutte le modifiche il comando è:
@@ -151,7 +161,7 @@ git stash pop
 
 [Torna all'indice](#indice)
 
-## 5. Branching
+## Branching
 
 I branch consentono lo sviluppo parallelo di funzionalità senza interferire con il branch principale. Alcuni comandi utili:
 
@@ -170,34 +180,84 @@ I branch consentono lo sviluppo parallelo di funzionalità senza interferire con
   git checkout -b nuovo-branch
   ```
 
-## 6. Fusione di branch
+- Creare un branch da uno specifico commit:
+  ```bash
+  git branch branch_name <commit-hash>
+  git checkout branch_name
+  git push --set-upstream origin branch_name
+  ```
 
-Dopo aver lavorato su un branch e voler unire le modifiche al branch principale:
+- Visualizzare le informazioni di tutti i branch:
+  ```bash
+  git branch -vv
+  ```
+
+- Visualizzare le informazioni di tutti i branch:
+  ```bash
+  git branch -vv
+  ```
+
+- Sincronizzare la cancellazione dei branch remoti:
+  ```bash
+  git fetch --prune origin
+  git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d
+  ```
+
+[Torna all'indice](#indice)
+
+## Merge e rebase
+
+Dopo aver lavorato su un branch, prima o poi sarà necessario unire le modifiche al branch principale:
 
 ```bash
 git checkout branch-principale
 git merge branch-da-unire
 ```
 
-## 7. Rimozione di file
-
-Per rimuovere un file dal repository:
-
+Può succedere che qualcun'altro abbia apportato modifiche al branch principale ed in tal caso durante il merge si potrebbero verificare dei conflitti: uno o più file potrebbero essere stati modificati in entrambi i branch. In molti casi Git riesce a risolvere automaticamente i conflitti (se le modifiche sono su porzioni differenti del file), ma negli altri sarà nostro compito decidere come risolverli. La risoluzione dei conflitti potrebbe essere piuttosto lunga e laboriosa perciò si consigliato dei tool grafici (ad esempio Git GUI), per concludere il merge bisogna che tutti i conflitti siano stati marcati come *resolved* ed effettuare una operazione di ```git commit```. Nel caso si voglia rinunciare al merge:
 ```bash
-git rm nome-del-file
-git commit -m "Rimosso il file"
+git merge --abort
 ```
 
-## 8. GitHub e repository remoti
+Se, prima di effettuare un merge, ci accorgiamo di modifiche al branch principale dovremmo aggiornare il nostro branch con tali modifiche:
+```bash
+git rebase branch-principale
+```
 
-- Collegare il repository locale a un repository su GitHub:
+[Torna all'indice](#indice)
+
+## Tagging
+I tag sono etichette che vengono utilizzate per contrassegnare punti specifici nella cronologia di un repository. Un tag è una referenza fissa ed immutabili che punta ad un commit particolare e può essere utilizzato per identificare versioni stabili, rilasci software o punti di riferimento importanti nel tuo progetto.
+
+- Creare un nuovo tag:
   ```bash
-  git remote add origin https://github.com/tuo-nome-utente/nome-repository.git
+  git tag -a <nome-del-tag> -m "Descrizione del tag"
   ```
 
-- Invia i tuoi commit al repository remoto:
+- Passare a un tag esistente:
   ```bash
-  git push -u origin branch-principale
+  git checkout tags/<nome-del-tag>
   ```
 
-Questa è solo una breve introduzione a Git. Per ulteriori dettagli, consulta la documentazione ufficiale di [Git](https://git-scm.com/doc). Buon sviluppo!
+- Visualizzazione dei tag esistenti:
+  ```bash
+  git tag -l
+
+- Cancellare uno o più tag in remoto:
+  ```bash
+  git tag -l "<nome-del-tag>" | xargs git push origin --delete
+  ```
+
+- Sincronizzare la cancellazione dei tag remoti:
+  ```bash
+  git fetch --prune origin "+refs/tags/*:refs/tags/*"
+  ```
+
+[Torna all'indice](#indice)
+
+## Altre utilità
+
+- Aggiornare le credeziali del password manager di Windows:
+  ```bash
+  cmdkey /delete:git:https://git.example.com
+  ```
