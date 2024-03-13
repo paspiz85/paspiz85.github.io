@@ -1,5 +1,7 @@
 # La mia guida all'utilizzo di Git
-
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png" alt="logo git">
+</p>
 Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato per gestire progetti software. Questa guida ti fornirà le informazioni di base per utilizzare al meglio Git nel tuo progetto.
 
 ## Indice
@@ -103,15 +105,6 @@ Per chi inizia ad usare Git per la prima volta, può risultare difficoltoso capi
 - *pushed*: non è un vero e proprio stato ma serve ad indicare la differenza tra un commit locale e un commit remoto (pubblicato tramite ```git push```). Solo questi ultimi infatti saranno visibili agli altri utenti.
 
 ### Modifiche staged e unstaged
-In realtà esisterebbe anche un ulteriore stato chiamato *stashed* in cui modifiche staged ed unstaged posso essere messe in una sorta di stack che (LIFO) utile per accantonare modifiche da utilizzare in un secondo momento. Per mettere da parte tutte le modifiche il comando è:
-```bash
-git stash
-```
-Per ripristinare le ultime modifiche messe da parte:
-```bash
-git stash pop
-```
-
 Per visualizzare tutte le modifiche locali (non ancora committed):
 ```bash
 git status
@@ -133,9 +126,27 @@ git restore --staged <elenco di uno o più file/cartelle>
 Successivamente sarà possibile annullarla del tutto anche dallo stato staged.
 
 ### Commit
-Quando il nostro lavoro ci sembra consistente possiamo procedere a confermare tutte le modifiche fatte con la generazione di un commit: da notare che non serve che tutte le modifiche siano nello stato staged, è possibile mantenere modifiche unstaged che però saranno ignorate. Ad ogni commit va _OBBLIGATORIAMENTE_ associato un messaggio che dovrebbe descrivere la modifica:
+Quando il nostro lavoro ci sembra consistente possiamo procedere a confermare tutte le modifiche fatte con la generazione di un commit: da notare che non serve che tutte le modifiche siano nello stato staged, è possibile mantenere modifiche unstaged che però saranno ignorate. Ad ogni commit va associato un messaggio che dovrebbe descrivere la modifica:
 ```bash
 git commit -m "Descrizione del commit"
+```
+Il messaggio è _OBBLIGATORIO_, se non specificato va inserito tramite l'editor di testo configurato in Git. 
+
+Nel caso fosse sfuggito qualcosa è possibile fare un secondo commit con l'opzione --amend:
+```bash
+git commit --amend
+```
+Il primo commit verrà sostituito da un commit cumulativo.
+
+
+### Stash
+In realtà esisterebbe anche un ulteriore stato chiamato *stashed* in cui modifiche staged ed unstaged posso essere messe in una sorta di stack che (LIFO) utile per accantonare modifiche da utilizzare in un secondo momento. Per mettere da parte tutte le modifiche il comando è:
+```bash
+git stash
+```
+Per ripristinare le ultime modifiche messe da parte:
+```bash
+git stash pop
 ```
 
 [Torna all'indice](#indice)
