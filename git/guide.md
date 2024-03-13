@@ -298,7 +298,7 @@ Considerazioni importanti:
 
 Ricorda sempre di fare attenzione quando utilizzi il rebase interattivo e lo squash, specialmente quando si tratta di commit condivisi con altri membri del team.
 
-Una alternativa allo squash è creare un nuovo branch che accorpa tutte le modifiche di un altro branch in un unico commit:
+Una alternativa allo squash è creare un nuovo branch che accorpa tutte le modifiche di un altro branch in un unico commit, basta individuare uno specifico commit o branch remoto (origin/nome_branch):
 ```bash
 git checkout branch_da_copiare
 git rebase commit_iniziale
