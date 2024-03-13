@@ -10,12 +10,16 @@ Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato 
 2. [Inizializzazione e configurazione di un repository](#inizializzazione-e-configurazione-di-un-repository)
 3. [Repository locali e remoti](#repository-locali-e-remoti)
 4. [Gestione delle modifiche](#gestione-delle-modifiche)
+  - [Modifiche staged e unstaged](#modifiche-staged-e-unstaged)
+  - [Commit e log delle modifiche](#commit-e-log-delle-modifiche)
+  - [Esclusione dal versioning](#esclusione-dal-versioning)
+  - [Stash](#stash)
 5. [Branching](#branching)
 6. [Merge e rebase](#merge-e-rebase)
-7. [Pull request](#pull-request)
-8. [Tagging](#tagging)
-9. [Altre funzioni utili](#altre-funzioni-utili)
-10. [Link utili](#link-utili)
+  - [Pull request](#pull-request)
+7. [Tagging](#tagging)
+8. [Altre funzioni utili](#altre-funzioni-utili)
+9. [Link utili](#link-utili)
 
 ## Installazione e configurazione iniziale
 
@@ -49,7 +53,7 @@ Le configurazioni utente possono essere visualizzate con:
 ```bash
 git config --global -l
 ```
-A questo livello vanno aggiunte il tuo nome utente e indirizzo email per identificare le modifiche nei commit:
+Per il corretto funzionamento di Git, è importante a questo livello aggiungere il tuo utente e indirizzo email per identificare le modifiche nei commit:
 ```bash
 git config --global user.name "Il_Tuo_Nome"
 git config --global user.email "tua@email.com"
@@ -68,6 +72,10 @@ Sarà creata un cartella con all'interno tutti i file del repository, posizionar
 Se invece è necessario creare da zero un nuovo progetto bisogna posizionarsi nella cartella del progetto e digitare:
 ```bash
 git init
+```
+Sarà poi necessario aggiungere un repository remoto con:
+```bash
+git remote add origin URL_del_repository
 ```
 
 Le configurazioni di repository possono essere visualizzate con:
@@ -128,7 +136,7 @@ git restore --staged elenco_di_uno_o_più_file_o_cartelle
 ```
 Successivamente sarà possibile annullarla del tutto anche dallo stato staged.
 
-### Commit
+### Commit e log delle modifiche
 Quando il nostro lavoro ci sembra consistente possiamo procedere a confermare tutte le modifiche fatte con la generazione di un commit: da notare che non serve che tutte le modifiche siano nello stato staged, è possibile mantenere modifiche unstaged che però saranno ignorate. Ad ogni commit va associato un messaggio che dovrebbe descrivere la modifica:
 ```bash
 git commit -m "Descrizione del commit"
@@ -148,6 +156,11 @@ git config --global alias.commit-push '!f() { git commit -m "$1" && git push; };
 Ora sarà possibile eseguire:
 ```bash
 git commit-push "Descrizione del commit"
+```
+
+Per visualizzare la cronologia di tutti i commit (del branch corrente):
+```bash
+git log
 ```
 
 ### Esclusione dal versioning
@@ -186,14 +199,19 @@ I branch consentono lo sviluppo parallelo di funzionalità senza interferire con
 
 - Creare un branch da uno specifico commit:
   ```bash
-  git branch nome_branch _commit_hash
+  git branch nome_branch commit_hash
   git checkout nome_branch
   git push --set-upstream remote_alias nome_branch
   ```
 
-- Visualizzare le informazioni di tutti i branch:
+- Visualizzare l'elenco di tutti i branch locali con i relativi riferimenti remoti:
   ```bash
   git branch -vv
+  ```
+
+- Visualizzare l'elenco di tutti i commit di tutti i branch:
+  ```bash
+  git show-branch
   ```
 
 - Copiare file/cartelle da uno specifico branch:
@@ -233,9 +251,7 @@ Se, prima di effettuare un merge, ci accorgiamo di modifiche al branch principal
 git rebase branch-principale
 ```
 
-[Torna all'indice](#indice)
-
-## Pull request
+### Pull request
 
 Il sistema delle pull request (PR) non è nativo di Git ma rapprenta uno strumento comune nelle piattaforme di hosting di repository Git come GitHub, GitLab e Bitbucket. Sono utilizzate per agevolare il processo di revisione del codice e l'integrazione delle modifiche nelle branch principali di un progetto. Un esempio di workflow con questo strumento è il seguente:
 
