@@ -16,7 +16,9 @@ Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato 
    4. [Stash](#stash)
 5. [Branching](#branching)
 6. [Merge e rebase](#merge-e-rebase)
-   1. [Pull request](#pull-request)
+   1. [Cherry-Pick](#cherry-pick)
+   2. [Squash](#squash)
+   3. [Pull request](#pull-request)
 7. [Tagging](#tagging)
 8. [Altre funzioni utili](#altre-funzioni-utili)
 9. [Link utili](#link-utili)
@@ -254,6 +256,49 @@ git merge --abort
 Se, prima di effettuare un merge, ci accorgiamo di modifiche al branch principale dovremmo aggiornare il nostro branch con tali modifiche:
 ```bash
 git rebase branch-principale
+```
+
+### Cherry-Pick:
+Per copiare un singolo commit nel branch corrente:
+```bash
+git cherry-pick commit_hash
+```
+Verrà generato un nuovo commit (con identificativo diverso) nel branch corrente che conterrà esattamente le stesse modifiche del commit originale.
+
+### Squash
+Lo squash è un'operazione che consente di combinare o "schizzare" diversi commit in un singolo commit. Questa tecnica è spesso utilizzata per semplificare la cronologia del repository, unendo una serie di piccoli commit in uno più significativo prima di inviarli al repository remoto. Utilizzo di Squash:
+
+1. **Identificare i Commit da Squashare:**
+   - Esegui `git log` per visualizzare la cronologia dei commit e individua i commit che desideri combinare. Ogni commit avrà un hash univoco associato.
+
+2. **Eseguire il Comando di Squash:**
+   - Utilizza il comando `git rebase -i HEAD~n`, dove `n` è il numero di commit indietro rispetto a HEAD che desideri includere nel processo di rebase interattivo.
+
+3. **Modificare l'Editor Interattivo:**
+   - Verrà aperto un editor di testo con una lista di commit. Cambia `pick` in `squash` o `s` per i commit che vuoi unire.
+
+4. **Risolvere i Conflitti se Necessario:**
+   - Se ci sono conflitti durante il processo di rebase interattivo, risolvi ciascun conflitto seguendo le istruzioni.
+
+5. **Inserire un Nuovo Messaggio di Commit:**
+   - Dopo lo squash, verrà richiesto di inserire un nuovo messaggio di commit che rappresenti le modifiche combinate. Salva e chiudi l'editor.
+
+6. **Forzare il Push se Necessario:**
+   - Se hai già inviato i commit al repository remoto, potrebbe essere necessario eseguire un push forzato (`git push -f`) per sovrascrivere la cronologia esistente.
+
+Considerazioni importanti:
+- Lo squash è utile per mantenere la cronologia del repository pulita e comprensibile.
+- È consigliabile utilizzare lo squash solo su commit locali non ancora inviati al repository remoto per evitare problemi di compatibilità.
+- Puoi combinare anche commit di branch diversi se desideri consolidare le modifiche correlate.
+
+Ricorda sempre di fare attenzione quando utilizzi il rebase interattivo e lo squash, specialmente quando si tratta di commit condivisi con altri membri del team.
+
+Una alternativa allo squash è creare un nuovo branch che accorpa tutte le modifiche di un altro branch in un unico commit:
+```bash
+git checkout commit_iniziale
+git checkout -b nuovo_branch
+git checkout branch_da_copiare .
+git commit -m "Descrizione della modifica"
 ```
 
 ### Pull request
