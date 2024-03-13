@@ -231,6 +231,11 @@ I branch consentono lo sviluppo parallelo di funzionalità senza interferire con
   git checkout nome_branch .
   ```
 
+- Cancellare un branch locale:
+  ```bash
+  git branch -D nome_branch
+  ```
+
 - Sincronizzare la cancellazione dei branch remoti:
   ```bash
   git fetch --prune origin
