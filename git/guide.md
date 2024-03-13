@@ -260,7 +260,7 @@ git merge --abort
 
 Se, prima di effettuare un merge, ci accorgiamo di modifiche al branch principale dovremmo aggiornare il nostro branch con tali modifiche:
 ```bash
-git rebase branch-principale
+git rebase origin/branch-principale
 ```
 
 ### Cherry-Pick:
