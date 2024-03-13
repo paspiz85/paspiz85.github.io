@@ -11,7 +11,10 @@ Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato 
 4. [Gestione delle modifiche](#gestione-delle-modifiche)
 5. [Branching](#branching)
 6. [Merge e rebase](#merge-e-rebase)
-7. [Tagging](#tagging)
+7. [Pull request](#pull-request)
+8. [Tagging](#tagging)
+9. [Altre funzioni utili](#altre-funzioni-utili)
+10. [Link utili](#link-utili)
 
 ## Installazione e configurazione iniziale
 
@@ -226,6 +229,46 @@ git rebase branch-principale
 
 [Torna all'indice](#indice)
 
+## Pull request
+
+Il sistema delle pull request (PR) non è nativo di Git ma rapprenta uno strumento comune nelle piattaforme di hosting di repository Git come GitHub, GitLab e Bitbucket. Sono utilizzate per agevolare il processo di revisione del codice e l'integrazione delle modifiche nelle branch principali di un progetto. Un esempio di workflow con questo strumento è il seguente:
+
+1. **Creazione di una Branch:**
+   - Un collaboratore crea una nuova branch nel repository per implementare le modifiche proposte.
+
+2. **Sviluppo delle Modifiche:**
+   - Il collaboratore effettua le modifiche richieste nella sua branch locale.
+
+3. **Push della Branch Remota:**
+   - La branch contenente le modifiche viene caricata sul repository remoto.
+
+4. **Creazione della Pull Request:**
+   - Il collaboratore crea una pull request per richiedere l'integrazione delle sue modifiche nella branch principale del progetto.
+
+5. **Revisione del Codice:**
+   - Altri membri del team revisionano il codice proposto nella pull request, fornendo feedback attraverso commenti.
+
+6. **Modifiche e Discussioni Aggiuntive:**
+   - Il creatore della pull request apporta eventuali modifiche in risposta ai feedback ricevuti.
+
+7. **Merge della Pull Request:**
+   - Dopo l'approvazione, un membro autorizzato esegue il merge delle modifiche nella branch principale.
+
+8. **Chiusura della Pull Request:**
+   - Dopo il merge, la pull request può essere chiusa, indicando il completamento del processo.
+
+I principali vantaggi delle Pull Request sono:
+
+- *Collaborazione Efficiente:* Le pull request agevolano la collaborazione e la revisione del codice in un ambiente controllato.
+  
+- *Tracciabilità delle Modifiche:* Ogni pull request offre una tracciabilità chiara delle modifiche proposte e delle discussioni correlate.
+
+- *Miglioramento della Qualità del Codice:* La revisione del codice attraverso pull request aiuta a garantire che solo le modifiche di alta qualità vengano integrate nella branch principale.
+
+Le pull request sono uno strumento essenziale per la gestione del codice sorgente in progetti collaborativi.
+
+[Torna all'indice](#indice)
+
 ## Tagging
 I tag sono etichette che vengono utilizzate per contrassegnare punti specifici nella cronologia di un repository. Un tag è una referenza fissa ed immutabili che punta ad un commit particolare e può essere utilizzato per identificare versioni stabili, rilasci software o punti di riferimento importanti nel tuo progetto.
 
@@ -255,9 +298,17 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 
 [Torna all'indice](#indice)
 
-## Altre utilità
+## Altre funzioni utili
 
 - Aggiornare le credeziali del password manager di Windows:
   ```bash
   cmdkey /delete:git:https://git.example.com
   ```
+
+[Torna all'indice](#indice)
+
+## Link utili
+
+- [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
+
+[Torna all'indice](#indice)
