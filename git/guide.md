@@ -300,6 +300,8 @@ Ricorda sempre di fare attenzione quando utilizzi il rebase interattivo e lo squ
 
 Una alternativa allo squash è creare un nuovo branch che accorpa tutte le modifiche di un altro branch in un unico commit:
 ```bash
+git checkout branch_da_copiare
+git rebase commit_iniziale
 git checkout commit_iniziale
 git checkout -b nuovo_branch
 git checkout branch_da_copiare .
