@@ -110,7 +110,7 @@ Il comando **git push** è la controparte di pull e serve ad inviare al reposito
 ## Gestione delle modifiche
 
 Per chi inizia ad usare Git per la prima volta, può risultare difficoltoso capire tutti gli step necessari ad apportare una modifica (visibile agli altri utenti). Il concetto chiave è capire lo stato in cui si può trovare una modifica, i possibili stati infatti sono:
-- *unstaged*: è lo stato in cui viene fatta una modifica ad un file senza comunicare alcunché a Git (in generale i nuovi file non vengono considerati in questo stato ma posso essere trattati allo stesso modo delle modifiche unstaged);
+- *unstaged*: è lo stato in cui viene fatta una modifica ad un file senza comunicare alcunché a Git, in generale i nuovi file detti non tracciati non vengono considerati in questo stato ma vengono  trattati allo stesso modo delle modifiche unstaged;
 - *staged*: è lo stato in cui una modifica ad un file viene dichiara pronta, serve a proteggere le modifiche volontare da quelle accidentali (che rimarranno unstaged);
 - *committed*: è lo stato in cui si trova una modifica confermata che può coivolgere uno o più file, tale modifica viene anche chiamata commit e rappresenta una unità atomica della cronologia del progetto. I commit vanno fatti sempre in locale e solo successivamente possono essere resi pubblici con ```git push```;
 - *pushed*: non è un vero e proprio stato ma serve ad indicare la differenza tra un commit locale e un commit remoto (pubblicato tramite ```git push```). Solo questi ultimi infatti saranno visibili agli altri utenti.
@@ -126,15 +126,20 @@ Per passare le modifiche di uno o più file da unstaged a staged si usa add (opp
 git add elenco_di_uno_o_più_file_o_cartelle
 ```
 
-Se c'è stata una modifica una modifica accidentale è possibile annullarla con:
+Se c'è stata una modifica una modifica accidentale è possibile annullarla con ```checkout --``` oppure ```restore```:
 ```bash
-git restore elenco_di_uno_o_più_file_o_cartelle
+git checkout -- elenco_di_uno_o_più_file_o_cartelle
 ```
 Se tale modifica fosse già passata nello stato staged è possibile farla ritornare nello stato unstaged con:
 ```bash
 git restore --staged elenco_di_uno_o_più_file_o_cartelle
 ```
 Successivamente sarà possibile annullarla del tutto anche dallo stato staged.
+
+Per rimuovere tutti i file e le cartelle non tracciati si usa:
+```bash
+git clean -d -f
+```
 
 ### Commit e log delle modifiche
 Quando il nostro lavoro ci sembra consistente possiamo procedere a confermare tutte le modifiche fatte con la generazione di un commit: da notare che non serve che tutte le modifiche siano nello stato staged, è possibile mantenere modifiche unstaged che però saranno ignorate. Ad ogni commit va associato un messaggio che dovrebbe descrivere la modifica:
