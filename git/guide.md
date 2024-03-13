@@ -20,7 +20,7 @@ Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato 
 
 Per iniziare, assicurati di avere Git installato sul tuo sistema. Puoi scaricarlo da [git-scm.com](https://git-scm.com/).
 
-Dopo l'installazione, la configurazione può essere fatta a vali livelli:
+Dopo l'installazione, la configurazione può essere fatta a vari livelli:
 
 1. **Configurazione di sistema**, valida per tutti gli utenti e solitamente memorizzata in ```/etc/gitconfig``` (su sistemi Unix-like) o ```C:\Program Files\Git\etc\gitconfig``` (su Windows).
 2. **Configurazione utente**, valida solo per l'utente corrente e solitamente memorizzata in ```~/.gitconfig``` o ```~/.config/git/config```.
