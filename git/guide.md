@@ -50,8 +50,8 @@ git config --global -l
 ```
 A questo livello vanno aggiunte il tuo nome utente e indirizzo email per identificare le modifiche nei commit:
 ```bash
-git config --global user.name "IlTuoNome"
-git config --global user.email "tuo@email.com"
+git config --global user.name "Il_Tuo_Nome"
+git config --global user.email "tua@email.com"
 ```
 
 [Torna all'indice](#indice)
@@ -60,7 +60,7 @@ git config --global user.email "tuo@email.com"
 
 Nel caso di di un progetto esistente è possibile scaricare il repository con il comando:
 ```bash
-git clone <URL_del_repository>
+git clone URL_del_repository
 ```
 Sarà creata un cartella con all'interno tutti i file del repository, posizionarsi in tale cartella per iniziare a lavorare.
 
@@ -89,7 +89,7 @@ git branch -vv
 ```
 Per aggiungere o modificare una associazione si usa il seguente comando:
 ```bash
-git branch --set-upstream-to=<remote_alias>/<remote_branch_name> <local_branch_name>
+git branch --set-upstream-to=remote_alias/remote_branch_name local_branch_name
 ```
 
 Il comando **git fetch** scarica le ultime modifiche dal repository remoto specificato (o da tutti i repository se non ne viene specificato uno). Una alternativa è il comando **git pull** analogo a fetch ma in aggiunta integra (merge) eventuali modifiche remote nel branch locale corrente.
@@ -114,16 +114,16 @@ git status
 
 Per passare le modifiche di uno o più file da unstaged a staged si usa add (oppure rm per le cancellazioni di file/cartelle):
 ```bash
-git add <elenco di uno o più file/cartelle>
+git add elenco_di_uno_o_più_file_o_cartelle
 ```
 
 Se c'è stata una modifica una modifica accidentale è possibile annullarla con:
 ```bash
-git restore <elenco di uno o più file/cartelle>
+git restore elenco_di_uno_o_più_file_o_cartelle
 ```
 Se tale modifica fosse già passata nello stato staged è possibile farla ritornare nello stato unstaged con:
 ```bash
-git restore --staged <elenco di uno o più file/cartelle>
+git restore --staged elenco_di_uno_o_più_file_o_cartelle
 ```
 Successivamente sarà possibile annullarla del tutto anche dallo stato staged.
 
@@ -168,26 +168,26 @@ git stash pop
 
 I branch consentono lo sviluppo parallelo di funzionalità senza interferire con il branch principale. Alcuni comandi utili:
 
-- Creare un nuovo branch:
+- Creare un nuovo branch dal branch corrente:
   ```bash
-  git branch nome-del-branch
+  git branch nome_branch
   ```
 
 - Passare a un branch esistente:
   ```bash
-  git checkout nome-del-branch
+  git checkout nome_branch
   ```
 
-- Creare e passare a un nuovo branch:
+- Creare e passare a un nuovo branch dal branch corrente:
   ```bash
-  git checkout -b nuovo-branch
+  git checkout -b nome_branch
   ```
 
 - Creare un branch da uno specifico commit:
   ```bash
-  git branch branch_name <commit-hash>
-  git checkout branch_name
-  git push --set-upstream origin branch_name
+  git branch nome_branch _commit_hash
+  git checkout nome_branch
+  git push --set-upstream remote_alias nome_branch
   ```
 
 - Visualizzare le informazioni di tutti i branch:
@@ -195,9 +195,14 @@ I branch consentono lo sviluppo parallelo di funzionalità senza interferire con
   git branch -vv
   ```
 
-- Visualizzare le informazioni di tutti i branch:
+- Copiare file/cartelle da uno specifico branch:
   ```bash
-  git branch -vv
+  git checkout nome_branch elenco_di_uno_o_più_file_o_cartelle
+  ```
+
+- Copiare tutti i file e le cartelle da uno specifico branch:
+  ```bash
+  git checkout nome_branch .
   ```
 
 - Sincronizzare la cancellazione dei branch remoti:
@@ -274,12 +279,12 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 
 - Creare un nuovo tag:
   ```bash
-  git tag -a <nome-del-tag> -m "Descrizione del tag"
+  git tag -a nome-del-tag -m "Descrizione del tag"
   ```
 
 - Passare a un tag esistente:
   ```bash
-  git checkout tags/<nome-del-tag>
+  git checkout tags/nome-del-tag
   ```
 
 - Visualizzazione dei tag esistenti:
@@ -288,7 +293,7 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 
 - Cancellare uno o più tag in remoto:
   ```bash
-  git tag -l "<nome-del-tag>" | xargs git push origin --delete
+  git tag -l "nome-del-tag" | xargs git push origin --delete
   ```
 
 - Sincronizzare la cancellazione dei tag remoti:
