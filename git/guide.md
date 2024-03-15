@@ -379,7 +379,7 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 
 ## Altre funzioni utili
 
-- Aggiornare le credeziali del password manager di Windows:
+- Aggiornare le credenziali del password manager di Windows:
   ```bash
   cmdkey /delete:git:https://git.example.com
   ```
