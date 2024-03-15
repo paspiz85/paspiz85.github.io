@@ -36,7 +36,20 @@
         <p style="text-align: center;">&copy; 2024 {{ site.title }} - <a href="{{ site.github.url }}">{{ site.github.url }}</a></p>
       </footer>
     </section>
-
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      var now = new Date();
+      var hour = now.getHours();
+  
+      // Verifica se è notte (dalle 19:00 alle 06:00)
+      if (hour >= 19 || hour < 6) {
+          document.body.style.filter = "invert(100%)"; // Inverte i colori del body
+      } else {
+          document.body.style.filter = "none"; // Ripristina i colori originali se non è notte
+      }
+    });
+    </script>
+  
     {% if site.google_analytics %}
       <script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
