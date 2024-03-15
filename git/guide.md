@@ -391,3 +391,7 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 - [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
 
 [Torna all'indice](#indice)
+
+---
+
+[Torna alla homepage](../)

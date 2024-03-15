@@ -27,13 +27,24 @@ After obtaining bachelor's degree, I continued my studies. In 2008 I began worki
 
 The main companies where I have worked are [Inmatica](https://www.inmatica.com/), [Almaviva](https://www.almaviva.it/), [ObjectWay](https://www.objectway.com/), [Altran](http://www.altran.com/), [Venere.com](http://www.venere.com/), [Hotels.com](https://www.hotels.com) and currently [Infotel Sistemi](https://www.infotelsistemi.com/).
 
-My main education and training achievements include:
-- **Bachelor's Degree in Computer Science** by Università degli Studi di Salerno in 2007
-- **Sun Certified Java Programmer** by Sun Microsystem Italia S.p.A in 2009
-- **Sun Certified Web Component Developer** by Sun Microsystem Italia S.p.A in 2009
-- **Sun Certified Developer for Java Web Services** by Sun Microsystem Italia S.p.A in 2010
-- **Oracle PL/SQL Developer Certified Associate** by Oracle Italia S.r.l in 2010
+During my career, I have also acquired several certifications, including:
 
-You can view my full Curriculum Vitae on my [LinkedIn profile](https://it.linkedin.com/in/pasqualepizzuti) or at following:
+<p align="center">
+  <img src="./images/logos/java_cert_prog.gif" alt="Sun Certified Java Programmer" style="width:18%" />
+  <img src="./images/logos/java_cert_web_comp_dev.gif" alt="Sun Certified Web Component Developer" style="width:18%" />
+  <img src="./images/logos/java_cert_web_serv_dev.gif" alt="Sun Certified Developer for Java Web Services" style="width:18%" />
+  <img src="./images/logos/OCA_PLSQLDev_clr.gif" alt="Oracle PL/SQL Developer Certified Associate" style="width:18%" />
+  <img src="./images/logos/arduino.png" alt="Arduino Certification" style="width:18%" />
+</p>
+
+You can view my full Curriculum Vitae at following:
 - [Curriculum Vitae (EN)](https://www.dropbox.com/scl/fi/qh4t3xuoq6983vtxunskl/CV-Pizzuti-Pasquale-EN.pdf?rlkey=4zrap4smaifq09zr7x6xgbohf&dl=0)
 - [Curriculum Vitae (IT)](https://www.dropbox.com/scl/fi/swith8tgkkgfninyz78fh/CV-Pizzuti-Pasquale-IT.pdf?rlkey=d3k517njkvwchi1n0v6dhtw5v&dl=0)
+
+### Useful Links
+
+- [GitHub Profile](http://github.com/paspiz85)
+- [LinkedIn Profile](https://it.linkedin.com/in/pasqualepizzuti)
+- [Git Guide (IT)](./git/guide.html)
+
+---
