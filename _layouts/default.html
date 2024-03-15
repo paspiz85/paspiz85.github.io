@@ -8,9 +8,18 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+    <style>
+      body.dark-theme {
+        background-color: #333;
+        filter: invert(100%);
+      }
+      body.dark-theme .no-theme {
+        filter: invert(100%);
+      }
+    </style>
   </head>
   <body>
-    <section class="page-header">
+    <section class="page-header no-theme">
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
@@ -40,12 +49,14 @@
     document.addEventListener("DOMContentLoaded", function() {
       var now = new Date();
       var hour = now.getHours();
-  
       // Verifica se è notte (dalle 19:00 alle 06:00)
-      if (hour >= 19 || hour < 6) {
-          document.body.style.filter = "invert(100%)"; // Inverte i colori del body
-      } else {
-          document.body.style.filter = "none"; // Ripristina i colori originali se non è notte
+      var dark = hour >= 19 || hour < 6;
+      var param = new URLSearchParams(window.location.search).get("dark");
+      if (param) {
+        dark = !!param;
+      }
+      if (dark) {
+        document.body.classList.add("dark-theme");
       }
     });
     </script>
