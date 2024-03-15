@@ -30,11 +30,11 @@ The main companies where I have worked are [Inmatica](https://www.inmatica.com/)
 During my career, I have also acquired several certifications, including:
 
 <p align="center">
-  <img src="./images/logos/java_cert_prog.gif" alt="Sun Certified Java Programmer" style="width:18%" />
-  <img src="./images/logos/java_cert_web_comp_dev.gif" alt="Sun Certified Web Component Developer" style="width:18%" />
-  <img src="./images/logos/java_cert_web_serv_dev.gif" alt="Sun Certified Developer for Java Web Services" style="width:18%" />
-  <img src="./images/logos/OCA_PLSQLDev_clr.gif" alt="Oracle PL/SQL Developer Certified Associate" style="width:18%" />
-  <img src="./images/logos/arduino.png" alt="Arduino Certification" style="width:18%" />
+  <img src="./images/logos/java_cert_prog.gif" alt="Sun Certified Java Programmer" style="width:19%" />
+  <img src="./images/logos/java_cert_web_comp_dev.gif" alt="Sun Certified Web Component Developer" style="width:19%" />
+  <img src="./images/logos/java_cert_web_serv_dev.gif" alt="Sun Certified Developer for Java Web Services" style="width:19%" />
+  <img src="./images/logos/OCA_PLSQLDev_clr.gif" alt="Oracle PL/SQL Developer Certified Associate" style="width:19%" />
+  <img src="./images/logos/arduino.png" alt="Arduino Certification" style="width:19%" />
 </p>
 
 You can view my full Curriculum Vitae at following:
@@ -46,5 +46,3 @@ You can view my full Curriculum Vitae at following:
 - [GitHub Profile](http://github.com/paspiz85)
 - [LinkedIn Profile](https://it.linkedin.com/in/pasqualepizzuti)
 - [Git Guide (IT)](./git/guide.html)
-
----

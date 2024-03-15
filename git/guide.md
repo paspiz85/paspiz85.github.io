@@ -392,6 +392,3 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 
 [Torna all'indice](#indice)
 
----
-
-[Torna alla homepage](../)
