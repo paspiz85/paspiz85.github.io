@@ -346,6 +346,11 @@ I principali vantaggi delle Pull Request sono:
 
 Le pull request sono uno strumento essenziale per la gestione del codice sorgente in progetti collaborativi.
 
+Può essere utile creare un alias per la creazione di una Pull Request:
+```bash
+git config --global alias.pr '!start $(git config --get remote.origin.url | sed 's/\.git$//')/compare/${1:-master}...$(git symbolic-ref --short HEAD)'
+```
+
 [Torna all'indice](#indice)
 
 ## Tagging
