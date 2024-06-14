@@ -369,6 +369,7 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 - Visualizzazione dei tag esistenti:
   ```bash
   git tag -l
+  ```
 
 - Cancellare uno o più tag in remoto:
   ```bash
