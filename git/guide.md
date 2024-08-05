@@ -389,6 +389,13 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
   ```bash
   cmdkey /delete:git:https://git.example.com
   ```
+  
+- Salvare le credenziali all'interno del repository corrente:
+  ```bash
+  echo '/.git-credentials' >> .gitignore
+  echo 'https://username:password@hostname' > .git-credentials
+  git config --local credential.helper 'store --file=.git-credentials'
+  ```
 
 [Torna all'indice](#indice)
 
