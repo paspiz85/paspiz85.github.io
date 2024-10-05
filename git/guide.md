@@ -356,7 +356,13 @@ git config --global alias.pr '!start $(git config --get remote.origin.url | sed 
 ## Tagging
 I tag sono etichette che vengono utilizzate per contrassegnare punti specifici nella cronologia di un repository. Un tag è una referenza fissa ed immutabili che punta ad un commit particolare e può essere utilizzato per identificare versioni stabili, rilasci software o punti di riferimento importanti nel tuo progetto.
 
-- Creare un nuovo tag:
+- Creare un nuovo tag velocemente:
+  ```bash
+  git tag v1.0.0
+  git push origin v1.0.0
+  ```
+
+  Creare un nuovo tag annotato:
   ```bash
   git tag -a nome-del-tag -m "Descrizione del tag"
   ```
@@ -392,9 +398,16 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
   
 - Salvare le credenziali all'interno del repository corrente:
   ```bash
-  echo '/.git-credentials' >> .gitignore
-  echo 'https://username:password@hostname' > .git-credentials
-  git config --local credential.helper 'store --file=.git-credentials'
+  echo '/.gitcredentials' >> .gitignore
+  echo 'https://username:password@hostname' > .gitcredentials
+  git config --local credential.helper 'store --file=.gitcredentials'
+  ```
+  
+- Creare:
+  ```bash
+  echo '/.gitcredentials' >> .gitignore
+  echo 'https://username:password@hostname' > .gitcredentials
+  git config --local credential.helper 'store --file=.gitcredentials'
   ```
 
 [Torna all'indice](#indice)
