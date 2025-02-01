@@ -380,6 +380,11 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 
 ## Alias utili
 
+- Creazione di un nuovo branch remoto
+  ```bash
+  git config --global alias.checkout-br '!f() { git checkout -b "$1" && git  push --set-upstream origin "$1"; }; f'
+  ```
+
 - Commit e push in unico comando:
   ```bash
   git config --global alias.commit-push '!f() { git commit -m "$1" && git push; }; f'
