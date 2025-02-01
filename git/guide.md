@@ -156,11 +156,7 @@ git commit --amend
 ```
 Il primo commit verrà sostituito da un commit cumulativo.
 
-*ATTENZIONE*: l'operazione di push è fondamentale per pubblicare un commit ed il comando commit non fornisce un meccanismo per automatizzare tale operazione. Tuttavia Git permette la definizione di alias per automatizzare questi due comandi:
-```bash
-git config --global alias.commit-push '!f() { git commit -m "$1" && git push; }; f'
-```
-Ora sarà possibile eseguire:
+*ATTENZIONE*: l'operazione di push è fondamentale per pubblicare un commit ed il comando commit non fornisce un meccanismo per automatizzare tale operazione. Tuttavia Git permette la definizione di alias per automatizzare questi due comandi, è possibile creare un alias **commit-push** (vedi [Alias utili](#alias-utili)) ed eseguire il comando:
 ```bash
 git commit-push "Descrizione del commit"
 ```
@@ -236,11 +232,7 @@ I branch consentono lo sviluppo parallelo di funzionalità senza interferire con
   git branch -D nome_branch
   ```
 
-- Sincronizzare la cancellazione dei branch remoti:
-  ```bash
-  git fetch --prune origin
-  git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d
-  ```
+- Sincronizzare la cancellazione dei branch remoti (vedi alias cleanup in [Alias utili](#alias-utili))
 
 [Torna all'indice](#indice)
 
@@ -346,10 +338,7 @@ I principali vantaggi delle Pull Request sono:
 
 Le pull request sono uno strumento essenziale per la gestione del codice sorgente in progetti collaborativi.
 
-Può essere utile creare un alias per la creazione di una Pull Request:
-```bash
-git config --global alias.pr '!start $(git config --get remote.origin.url | sed 's/\.git$//')/compare/${1:-master}...$(git symbolic-ref --short HEAD)'
-```
+Può essere utile creare un alias per la creazione di una Pull Request (vedi alias pr in [Alias utili](#alias-utili)).
 
 [Torna all'indice](#indice)
 
@@ -389,6 +378,25 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
 
 [Torna all'indice](#indice)
 
+## Alias utili
+
+- Commit e push in unico comando:
+  ```bash
+  git config --global alias.commit-push '!f() { git commit -m "$1" && git push; }; f'
+  ```
+  
+- Avvio creazione pull-request:
+  ```bash
+  git config --global alias.pr '!start $(git config --get remote.origin.url | sed 's/\.git$//')/compare/${1:-master}...$(git symbolic-ref --short HEAD)'
+  ```
+  
+- Rimozione dei branch/tag locali rimossi in remoto:
+  ```bash
+  git config --global alias.cleanup '!git fetch --prune origin && git fetch --prune origin "+refs/tags/*:refs/tags/*" && git branch -vv | grep ": gone]" | awk "{print \$1}" | xargs -r git branch -d'
+  ```
+
+[Torna all'indice](#indice)
+
 ## Altre funzioni utili
 
 - Aggiornare le credenziali del password manager di Windows:
@@ -397,13 +405,6 @@ I tag sono etichette che vengono utilizzate per contrassegnare punti specifici n
   ```
   
 - Salvare le credenziali all'interno del repository corrente:
-  ```bash
-  echo '/.gitcredentials' >> .gitignore
-  echo 'https://username:password@hostname' > .gitcredentials
-  git config --local credential.helper 'store --file=.gitcredentials'
-  ```
-  
-- Creare:
   ```bash
   echo '/.gitcredentials' >> .gitignore
   echo 'https://username:password@hostname' > .gitcredentials
