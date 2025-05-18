@@ -29,14 +29,6 @@ The main companies where I have worked are [Inmatica](https://www.inmatica.com/)
 
 During my career, I have also acquired several certifications, including:
 
-<p align="center">
-  <img src="./images/logos/java_cert_prog.gif" alt="Sun Certified Java Programmer" style="width:19%" />
-  <img src="./images/logos/java_cert_web_comp_dev.gif" alt="Sun Certified Web Component Developer" style="width:19%" />
-  <img src="./images/logos/java_cert_web_serv_dev.gif" alt="Sun Certified Developer for Java Web Services" style="width:19%" />
-  <img src="./images/logos/OCA_PLSQLDev_clr.gif" alt="Oracle PL/SQL Developer Certified Associate" style="width:19%" />
-  <img src="./images/logos/arduino.png" alt="Arduino Certification" style="width:19%" />
-</p>
-
 <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
   <a href="https://www.credly.com/badges/81e7f1a2-03a8-4c29-8d1a-a982736a9f2f" target="_blank" title="Sun Certified Java Programmer" style="text-align: center;">
     <img src="./images/logos/java_cert_prog.gif" alt="Sun Certified Java Programmer" style="height:100px" />
