@@ -37,6 +37,36 @@ During my career, I have also acquired several certifications, including:
   <img src="./images/logos/arduino.png" alt="Arduino Certification" style="width:19%" />
 </p>
 
+<div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+  <a href="https://www.credly.com/badges/81e7f1a2-03a8-4c29-8d1a-a982736a9f2f" target="_blank" title="Sun Certified Java Programmer" style="text-align: center;">
+    <img src="./images/logos/java_cert_prog.gif" alt="Sun Certified Java Programmer" style="height:100px" />
+  </a>
+  <a href="https://www.credly.com/badges/81e7f1a2-03a8-4c29-8d1a-a982736a9f2f" target="_blank" title="Sun Certified Web Component Developer" style="text-align: center;">
+    <img src="./images/logos/java_cert_web_comp_dev.gif" alt="Sun Certified Web Component Developer" style="height:100px" />
+  </a>
+  <a href="https://www.credly.com/badges/81e7f1a2-03a8-4c29-8d1a-a982736a9f2f" target="_blank" title="Sun Certified Developer for Java Web Services" style="text-align: center;">
+    <img src="./images/logos/java_cert_web_serv_dev.gif" alt="Sun Certified Developer for Java Web Services" style="height:100px" />
+  </a>
+  <a href="https://www.credly.com/badges/e8c80dce-a70f-4234-9b7a-b48368f797ee" target="_blank" title="Oracle PL/SQL Developer Certified Associate" style="text-align: center;">
+    <img src="./images/logos/OCA_PLSQLDev_clr.gif" alt="Oracle PL/SQL Developer Certified Associate" style="height:100px" />
+  </a>
+  <a href="https://certifications.arduino.cc/certificate/9fac61f3-62b2-4f66-b633-86a03a3d195a" target="_blank" title="Arduino Certification" style="text-align: center;">
+    <img src="./images/logos/arduino.png" alt="Arduino Certification" style="height:100px" />
+  </a>
+  <a href="https://www.credly.com/badges/2378177d-fc3b-4f48-9c1a-c5e4da79309a" target="_blank" title="Junior Cybersecurity Analyst" style="text-align: center;">
+    <img src="https://images.credly.com/size/340x340/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png" alt="Junior Cybersecurity Analyst" style="height:100px" />
+  </a>
+  <a href="https://www.credly.com/badges/9635587f-8b84-46b7-b8a1-16db9f9a7430" target="_blank" title="Fortinet Certified Associate Cybersecurity" style="text-align: center;">
+    <img src="https://images.credly.com/size/340x340/images/20082fc1-94af-4773-9df0-28856b566748/image.png" alt="Fortinet Certified Associate Cybersecurity" style="height:100px" />
+  </a>
+  <a href="https://www.credly.com/badges/f0d2832a-1c1e-411c-bb5c-a72e5026037d" target="_blank" title="Linux Essentials Certificate" style="text-align: center;">
+    <img src="https://images.credly.com/size/340x340/images/1d36cb36-20fc-4961-8d70-6307c015d1aa/blob" alt="Linux Essentials Certificate" style="height:100px" />
+  </a>
+  <a href="https://skillshop.exceedlms.com/student/award/8MAXugxpx3oLbK1CmfynhPZ8" target="_blank" title="Fundamentals of digital marketing" style="text-align: center;">
+    <img src="https://storage.googleapis.com/exceedlms-external-uploads-production/uploads/certifications/badges/130513/large/badge.png" alt="Fundamentals of digital marketing" style="height:100px" />
+  </a>
+</div>
+
 You can view my full Curriculum Vitae at following:
 - [Curriculum Vitae (EN)](./cv/en.html)
 - [Curriculum Vitae (IT)](./cv/it.html)
