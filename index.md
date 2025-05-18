@@ -38,8 +38,8 @@ During my career, I have also acquired several certifications, including:
 </p>
 
 You can view my full Curriculum Vitae at following:
-- [Curriculum Vitae (EN)](https://www.dropbox.com/scl/fi/qh4t3xuoq6983vtxunskl/CV-Pizzuti-Pasquale-EN.pdf?rlkey=4zrap4smaifq09zr7x6xgbohf&dl=0)
-- [Curriculum Vitae (IT)](https://www.dropbox.com/scl/fi/swith8tgkkgfninyz78fh/CV-Pizzuti-Pasquale-IT.pdf?rlkey=d3k517njkvwchi1n0v6dhtw5v&dl=0)
+- [Curriculum Vitae (EN)](./cv/en.html)
+- [Curriculum Vitae (IT)](./cv/it.html)
 
 ### Useful Links
 
