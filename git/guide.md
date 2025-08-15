@@ -263,7 +263,15 @@ git cherry-pick commit_hash
 Verrà generato un nuovo commit (con identificativo diverso) nel branch corrente che conterrà esattamente le stesse modifiche del commit originale.
 
 ### Squash
-Lo squash è un'operazione che consente di combinare o "schizzare" diversi commit in un singolo commit. Questa tecnica è spesso utilizzata per semplificare la cronologia del repository, unendo una serie di piccoli commit in uno più significativo prima di inviarli al repository remoto. Utilizzo di Squash:
+Lo squash è un'operazione che consente di combinare o "schizzare" diversi commit in un singolo commit. Questa tecnica è spesso utilizzata per semplificare la cronologia del repository, unendo una serie di piccoli commit in uno più significativo prima di inviarli al repository remoto.
+
+Il modo più semplice per fare uno squash è in fase di merge da un altro branch:
+```bash
+git merge --squash branch_da_copiare
+git commit -m "Descrizione della modifica"
+```
+
+In alternativa possono essere "uniti" più commit sullo stesso branch con la seguente procedura:
 
 1. **Identificare i Commit da Squashare:**
    - Esegui `git log` per visualizzare la cronologia dei commit e individua i commit che desideri combinare. Ogni commit avrà un hash univoco associato.
@@ -289,16 +297,6 @@ Considerazioni importanti:
 - Puoi combinare anche commit di branch diversi se desideri consolidare le modifiche correlate.
 
 Ricorda sempre di fare attenzione quando utilizzi il rebase interattivo e lo squash, specialmente quando si tratta di commit condivisi con altri membri del team.
-
-Una alternativa allo squash è creare un nuovo branch che accorpa tutte le modifiche di un altro branch in un unico commit, basta individuare uno specifico commit o branch remoto (origin/nome_branch):
-```bash
-git checkout branch_da_copiare
-git rebase commit_iniziale
-git checkout commit_iniziale
-git checkout -b nuovo_branch
-git checkout branch_da_copiare .
-git commit -m "Descrizione della modifica"
-```
 
 ### Pull request
 
