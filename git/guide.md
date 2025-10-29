@@ -392,6 +392,19 @@ git config --list | grep alias
   ```bash
   git config --global alias.commit-push '!f() { git commit -m "$1" && git push; }; f'
   ```
+
+- Squash degli ultimi commit:
+  ```bash
+  git config --global alias.squash '!f() { \
+    N=${1:-2}; \
+    M=${2:-"Squash last $N commit"}; \
+    BRANCH=$(git rev-parse --abbrev-ref HEAD); \
+    BASE=$(git rev-parse HEAD~$N); \
+    git reset --soft "$BASE" && \
+    git commit -m "$M" && \
+    git push --force-with-lease origin "$BRANCH"; \
+  }; f'
+  ```
   
 - Avvio creazione pull-request:
   ```bash
@@ -426,4 +439,5 @@ git config --list | grep alias
 - [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
 
 [Torna all'indice](#indice)
+
 
