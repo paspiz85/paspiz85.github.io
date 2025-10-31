@@ -201,13 +201,25 @@ git stash pop
 
 ## Firma dei commit
 
-Per firmare i commit è necessario configurare una chiave SSH o GPG:
+Per firmare i commit è necessario configurare una chiave SSH o GPG, la prima volta va creata con:
 ```bash
 gpg --full-generate-key
 gpg --list-secret-keys --keyid-format=long
 ```
 
-Configurare la chiave con:
+Per fare un backup e/o trasferirla su un'altra macchina :
+```bash
+gpg --armor --export-secret-keys ABCD1234EFGH5678 > private-key.asc
+```
+
+Per reimportarla 
+```bash
+gpg --import private-key.asc
+gpg --list-secret-keys --keyid-format=long
+gpg --edit-key ABCD1234EFGH5678 trust quit
+```
+
+Dopo aver generato o importato la chiave, configurarla su git con:
 
 ```bash
 git config --global user.signingkey ABCD1234EFGH5678
@@ -486,6 +498,7 @@ git config --list | grep alias
 - [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
 
 [Torna all'indice](#indice)
+
 
 
 
