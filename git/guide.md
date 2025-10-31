@@ -14,6 +14,7 @@ Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato 
    2. [Commit e log delle modifiche](#commit-e-log-delle-modifiche)
    3. [Esclusione dal versioning](#esclusione-dal-versioning)
    4. [Stash](#stash)
+   5. [Firma dei commit(#firma-dei-commit)]
 5. [Branching](#branching)
 6. [Merge e rebase](#merge-e-rebase)
    1. [Cherry-Pick](#cherry-pick)
@@ -59,6 +60,25 @@ Per il corretto funzionamento di Git, è importante a questo livello aggiungere 
 ```bash
 git config --global user.name "Il_Tuo_Nome"
 git config --global user.email "tua@email.com"
+```
+
+Se serve possono essere definiti anche dei profili a livello globale. Nel file  ```~/personal.gitconfig``` scriviamo:
+```
+[user]
+	name = Pasquale Pizzuti
+	email = paspiz85@mail.com
+	signingkey = EF0E5A1DBCC9600F840540F74CA35500153CFFF4
+[commit]
+	gpgsign = true
+```
+
+Mentre in ```~/personal.gitconfig```:
+```
+[user]
+	name = Pasquale Pizzuti
+	email = pasquale.pizzuti@megaditta.it
+[includeIf "gitdir:C:/Data/me/"]
+	path = ~/personal.gitconfig
 ```
 
 [Torna all'indice](#indice)
@@ -178,6 +198,23 @@ Per ripristinare le ultime modifiche messe da parte:
 ```bash
 git stash pop
 ```
+
+## Firma dei commit
+
+Per firmare i commit è necessario configurare una chiave SSH o GPG:
+```bash
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format=long
+```
+
+Configurare la chiave con:
+
+```bash
+git config --global user.signingkey ABCD1234EFGH5678
+git config --global commit.gpgsign true
+```
+
+Ed infine esportare la chiave pubblica con ```gpg --armor --export ABCD1234EFGH5678``` per configurarla su GitHub/GitLab.
 
 [Torna all'indice](#indice)
 
@@ -449,6 +486,7 @@ git config --list | grep alias
 - [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
 
 [Torna all'indice](#indice)
+
 
 
 
