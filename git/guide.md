@@ -385,7 +385,7 @@ git config --list | grep alias
 
 - Creazione di un nuovo branch remoto
   ```bash
-  git config --global alias.checkout-br '!f() { git checkout -b "$1" && git  push --set-upstream origin "$1"; }; f'
+  git config --global alias.checkout-br '!f() { git checkout -b "$1" && git push --set-upstream origin "$1"; }; f'
   ```
 
 - Commit e push in unico comando:
@@ -396,7 +396,17 @@ git config --list | grep alias
 - Squash degli ultimi commit:
   ```bash
   git config --global alias.squash '!f() { \
-    N=${1:-2}; \
+    N=${1:-1}; \
+    if [ "$N" -lt 1 ]; then echo "N must be >= 1" >&2; return 1; fi; \
+    if [ -z "${2+x}" ]; then \
+      if [ "$N" -eq 1 ]; then \
+        M=$(git log -1 --pretty=%B); \
+      else \
+        M="Squash last $N commits"; \
+      fi; \
+    else \
+      M=$2; \
+    fi; \
     M=${2:-"Squash last $N commit"}; \
     BRANCH=$(git rev-parse --abbrev-ref HEAD); \
     BASE=$(git rev-parse HEAD~$N); \
@@ -439,5 +449,6 @@ git config --list | grep alias
 - [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
 
 [Torna all'indice](#indice)
+
 
 
