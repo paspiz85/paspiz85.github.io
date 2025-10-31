@@ -14,7 +14,7 @@ Git è un sistema di controllo delle versioni distribuito ampiamente utilizzato 
    2. [Commit e log delle modifiche](#commit-e-log-delle-modifiche)
    3. [Esclusione dal versioning](#esclusione-dal-versioning)
    4. [Stash](#stash)
-   5. [Firma dei commit(#firma-dei-commit)]
+   5. [Firma dei commit](#firma-dei-commit)]
 5. [Branching](#branching)
 6. [Merge e rebase](#merge-e-rebase)
    1. [Cherry-Pick](#cherry-pick)
@@ -486,6 +486,7 @@ git config --list | grep alias
 - [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
 
 [Torna all'indice](#indice)
+
 
 
 
