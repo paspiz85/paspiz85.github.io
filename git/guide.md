@@ -207,6 +207,10 @@ gpg --full-generate-key
 gpg --list-secret-keys --keyid-format=long
 ```
 
+L'id della chiave è quel codice sulla riga sec dopo l'algoritmo (ad esempio ABCD1234EFGH5678).
+
+**ATTENZIONE**: nome ed e-mail devono corrispondere a quelli della chiave!
+
 Per fare un backup e/o trasferirla su un'altra macchina :
 ```bash
 gpg --armor --export-secret-keys ABCD1234EFGH5678 > private-key.asc
@@ -498,6 +502,7 @@ git config --list | grep alias
 - [Git & Tricks da Mia Mamma Usa Linux](https://www.miamammausalinux.org/2023/10/git-tricks-pillole-di-source-code-management-parte-1-lambiente/)
 
 [Torna all'indice](#indice)
+
 
 
 
