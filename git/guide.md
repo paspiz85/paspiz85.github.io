@@ -72,7 +72,7 @@ Se serve possono essere definiti anche dei profili a livello globale. Nel file  
 	gpgsign = true
 ```
 
-Mentre in ```~/personal.gitconfig```:
+Mentre in ```~/.gitconfig```:
 ```
 [user]
 	name = Pasquale Pizzuti
@@ -199,7 +199,7 @@ Per ripristinare le ultime modifiche messe da parte:
 git stash pop
 ```
 
-## Firma dei commit
+### Firma dei commit
 
 Per firmare i commit è necessario configurare una chiave SSH o GPG, la prima volta va creata con:
 ```bash

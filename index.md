@@ -23,7 +23,7 @@ For other activities, visit [my GitHub page](https://github.com/paspiz85).
 
 I was born on 8th February 1985 and studied **computer science** at the [Università degli Studi di Salerno](https://www.unisa.it/), where I graduated in 2007.
 
-After obtaining bachelor's degree, I continued my studies. In 2008 I began working in a small company based in Rome, Italy. However, after several years (and numerous exams), I decided to suspend my master's degree to fully dedicate myselft to work.
+After obtaining bachelor's degree, I continued my studies. In 2008 I began working in a small company based in Rome, Italy. However, after several years (and numerous exams), I decided to suspend my master's degree to fully dedicate myself to work.
 
 The main companies where I have worked are [Inmatica](https://www.inmatica.com/), [Almaviva](https://www.almaviva.it/), [ObjectWay](https://www.objectway.com/), [Altran](http://www.altran.com/), [Venere.com](http://www.venere.com/), [Hotels.com](https://www.hotels.com) and currently [Infotel Sistemi](https://www.infotelsistemi.com/).
 
@@ -65,6 +65,6 @@ You can view my full Curriculum Vitae at following:
 
 ### Useful Links
 
-- [GitHub Profile](http://github.com/paspiz85)
+- [GitHub Profile](https://github.com/paspiz85)
 - [LinkedIn Profile](https://it.linkedin.com/in/pasqualepizzuti)
 - [Git Guide (IT)](./git/guide.html)
