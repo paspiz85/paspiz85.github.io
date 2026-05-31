@@ -436,6 +436,15 @@ Per visualizzare gli alias configurati:
 git config --list | grep alias
 ```
 
+- Visualizzazione del grafico dei commit:
+  ```bash
+  git config --global alias.graph 'log --all --graph --decorate'
+  ```
+  Ad esempio con l'opzione `--oneline`:
+  ```bash
+  git graph --oneline
+  ```
+
 - Creazione di un nuovo branch remoto
   ```bash
   git config --global alias.checkout-br '!f() { git checkout -b "$1" && git push --set-upstream origin "$1"; }; f'
