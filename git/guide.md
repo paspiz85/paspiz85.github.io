@@ -186,6 +186,15 @@ Per visualizzare la cronologia di tutti i commit (del branch corrente):
 git log
 ```
 
+Per visualizzare il grafico della cronologia di tutti i branch in forma compatta:
+```bash
+git log --all --graph --decorate --oneline
+```
+L'opzione `--all` include tutti i branch (non solo quello corrente), `--graph` disegna il grafico ASCII delle diramazioni e delle unioni, `--decorate` mostra i riferimenti (branch, tag, HEAD) accanto ai commit e `--oneline` comprime ogni commit su una singola riga. È possibile creare un alias **log-graph** (vedi [Alias utili](#alias-utili)) per richiamare velocemente questo comando:
+```bash
+git log-graph
+```
+
 ### Esclusione dal versioning
 Nel caso in cui sia necessario escludere file/cartelle dal versionamento si usa l'apposito file di testo **.gitignore**.
 
@@ -435,6 +444,11 @@ Per visualizzare gli alias configurati:
 ```bash
 git config --list | grep alias
 ```
+
+- Visualizzazione del grafico dei commit:
+  ```bash
+  git config --global alias.log-graph 'log --all --graph --decorate --oneline'
+  ```
 
 - Creazione di un nuovo branch remoto
   ```bash
