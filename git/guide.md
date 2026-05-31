@@ -186,7 +186,6 @@ Per visualizzare la cronologia di tutti i commit (del branch corrente):
 git log
 ```
 
-
 ### Esclusione dal versioning
 Nel caso in cui sia necessario escludere file/cartelle dal versionamento si usa l'apposito file di testo **.gitignore**.
 
@@ -440,6 +439,10 @@ git config --list | grep alias
 - Visualizzazione del grafico dei commit:
   ```bash
   git config --global alias.graph 'log --all --graph --decorate'
+  ```
+  Ad esempio con l'opzione `--oneline`:
+  ```bash
+  git graph --oneline
   ```
 
 - Creazione di un nuovo branch remoto
